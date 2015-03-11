@@ -9,4 +9,8 @@ class Playlist
     @songs.length == 0
   end
 
+  def add_song(title)
+    @songs << title
+  end
+
 end
