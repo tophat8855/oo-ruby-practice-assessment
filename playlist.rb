@@ -46,4 +46,8 @@ class Playlist
     @now_playing = @songs.first
   end
 
+  def next
+    next_playing_index = @songs.index(@now_playing) + 1
+    @now_playing = @songs[next_playing_index]
+  end
 end
