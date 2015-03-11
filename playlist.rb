@@ -1,8 +1,9 @@
 class Playlist
-  attr_reader :songs
+  attr_reader :songs, :now_playing
 
   def initialize
     @songs = []
+    @now_playing = nil
   end
 
   def empty?
@@ -39,6 +40,10 @@ class Playlist
 
     @songs[song1_index] = song2
     @songs[song2_index] = song1
+  end
+
+  def play
+    @now_playing = @songs.first
   end
 
 end
