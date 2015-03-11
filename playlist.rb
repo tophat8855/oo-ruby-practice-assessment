@@ -33,4 +33,12 @@ class Playlist
     length
   end
 
+  def swap(song1, song2)
+    song1_index = @songs.index(song1)
+    song2_index = @songs.index(song2)
+
+    @songs[song1_index] = song2
+    @songs[song2_index] = song1
+  end
+
 end
