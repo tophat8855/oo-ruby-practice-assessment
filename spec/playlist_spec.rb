@@ -35,43 +35,43 @@ RSpec.describe Playlist do
       'But Not for Me'
       ])
   end
-  #
-  # it "allows you remove a song from the playlist" do
-  #   playlist = Playlist.new
-  #
-  #   playlist.add_song(it_had_to_be_you)
-  #   expect(playlist.empty?).to eq(false)
-  #
-  #   playlist.add_song(but_not_for_me)
-  #
-  #   expect(playlist.song_names).to eq([
-  #     'It had to be you',
-  #     'But Not for Me',
-  #   ])
-  #
-  #   playlist.remove_song(it_had_to_be_you)
-  #   expect(playlist.song_names).to eq([
-  #     'But Not for Me',
-  #   ])
-  #   expect(playlist.empty?).to eq(false)
-  #
-  #   playlist.remove_song(but_not_for_me)
-  #
-  #   expect(playlist.song_names).to eq([])
-  #   expect(playlist.empty?).to eq(true)
-  # end
-  #
-  # it "tells you the total length of the playlist"  do
-  #   playlist = Playlist.new
-  #
-  #   playlist.add_song(it_had_to_be_you)
-  #   expect(playlist.total_length).to eq(100)
-  #
-  #   playlist.add_song(but_not_for_me)
-  #   playlist.add_song(autumn_in_new_york)
-  #   expect(playlist.total_length).to eq(175)
-  # end
-  #
+
+  it "allows you remove a song from the playlist" do
+    playlist = Playlist.new
+
+    playlist.add_song(it_had_to_be_you)
+    expect(playlist.empty?).to eq(false)
+
+    playlist.add_song(but_not_for_me)
+
+    expect(playlist.song_names).to eq([
+      'It had to be you',
+      'But Not for Me',
+    ])
+
+    playlist.remove_song(it_had_to_be_you)
+    expect(playlist.song_names).to eq([
+      'But Not for Me',
+    ])
+    expect(playlist.empty?).to eq(false)
+
+    playlist.remove_song(but_not_for_me)
+
+    expect(playlist.song_names).to eq([])
+    expect(playlist.empty?).to eq(true)
+  end
+
+  it "tells you the total length of the playlist"  do
+    playlist = Playlist.new
+
+    playlist.add_song(it_had_to_be_you)
+    expect(playlist.total_length).to eq(100)
+
+    playlist.add_song(but_not_for_me)
+    playlist.add_song(autumn_in_new_york)
+    expect(playlist.total_length).to eq(175)
+  end
+  
   # it("allows you to swap songs") do
   #   playlist = Playlist.new
   #

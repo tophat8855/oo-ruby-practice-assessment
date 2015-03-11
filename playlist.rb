@@ -21,4 +21,16 @@ class Playlist
     title_array
   end
 
+  def remove_song(song)
+    @songs.delete(song)
+  end
+
+  def total_length
+    length = 0
+    @songs.each do |song|
+      length += song.length
+    end
+    length
+  end
+
 end
